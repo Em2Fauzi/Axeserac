@@ -33,28 +33,6 @@ function disk_isco(r_guess,proret)
     rg = r_guess
     r_isco = find_zero(find_isco,rg);
 
-    while condi
-        plot(rr,fisc,"r")
-        scatter(r_isco,find_isco(r_isco))
-
-        ylim(-1,1)
-        grid()
-        show()
-
-        # println("Change r_guess?")
-        # cont = readline()
-        cont = "n"
-        if cont == "y"
-            # println("Input new r_guess")
-            rg = 3
-            # rg = parse(Float64,rg)
-
-            r_isco = find_zero(find_isco,rg);
-        else
-            condi=false
-        end
-    end
-
     println(r_isco)
     return r_isco
 end
@@ -84,7 +62,6 @@ function check_isco(r_guess,proret; limx=[0,10],limy=[-1,1])
     ax.grid()
 
     println("r_ISCO = ",r_isco)
-    return fig
 end
 
 

@@ -21,7 +21,7 @@ function H(x,u,e)
     betu =g[1,4]*uph/g[4,4];
 
     H=1
-    if x[2]<0
+    if alph*(yuu + ep)<0
         H=0
         alph=0
     end
